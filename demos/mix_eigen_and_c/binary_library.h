@@ -13,6 +13,7 @@
 // they will be compiled to C object code.
 
 #ifdef __cplusplus
+#include <iostream>
 extern "C"
 {
 #endif

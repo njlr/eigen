@@ -1,0 +1,22 @@
+cxx_library(
+  name = 'binary_library',
+  headers = [
+    'binary_library.h',    
+  ],
+  srcs = [
+    'binary_library.cpp',
+  ],
+  deps = [
+    '//:eigen', 
+  ],
+)
+
+cxx_binary(
+  name = 'mix_eigen_and_c',
+  srcs = [
+    'example.c',
+  ],
+  deps = [
+    ':binary_library',
+  ],
+)
